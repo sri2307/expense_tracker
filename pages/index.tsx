@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
+import React from "react";
+import Home from "../lib/components/Home/Home";
 
-const Home: NextPage = () => {
-  return <h2>Expense Tracker</h2>;
+const Welcome: NextPage = () => {
+  return <Home />;
 };
 
-export default Home;
+export default Welcome;
