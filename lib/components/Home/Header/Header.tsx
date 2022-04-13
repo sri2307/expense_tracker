@@ -4,6 +4,7 @@ import MTypography from "components/utils/typography/MTypography";
 import { en } from "translations/en/en";
 import { es } from "translations/es/es";
 import { useRouter } from "next/router";
+import MButton from "components/utils/button/MButton";
 
 type Props = {};
 
@@ -14,6 +15,8 @@ const Header = (props: Props) => {
   const styles = {
     navbar: {
       background: "#1976D2",
+      display: "flex",
+      justifyContent: "space-between",
     },
     title: {
       color: "#fff",
@@ -21,11 +24,16 @@ const Header = (props: Props) => {
 
       textAlign: "center",
     },
+    button: {
+      background: "#1976D2",
+      color: "#fff",
+    },
   };
 
   return (
     <MNavbar styles={styles.navbar}>
       <MTypography styles={styles.title} content={t.app_title} />
+      <MButton styles={styles.button} buttonName="Sign In" />
     </MNavbar>
   );
 };
