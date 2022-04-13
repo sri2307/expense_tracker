@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import Toolbar from "@mui/material/Toolbar";
 
-type Props = {}
+type Props = {
+  children?: any;
+  styles: {
+    background?: string;
+    height?: string;
+  };
+};
 
 const MNavbar = (props: Props) => {
-  return (
-    <div>MNavbar</div>
-  )
-}
+  const { children, styles } = props;
+  return <Toolbar sx={styles}>{children}</Toolbar>;
+};
 
-export default MNavbar
+export default MNavbar;
