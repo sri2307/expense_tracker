@@ -2,7 +2,7 @@ import React from "react";
 import Container from "@mui/material/Container";
 
 type Props = {
-  children: any;
+  children?: any;
   styles: {
     background?: string;
     height?: string;

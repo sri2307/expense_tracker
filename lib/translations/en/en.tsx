@@ -1,3 +1,16 @@
 export const en = {
-  app_title: "Expense Tracker",
+  content:{
+    header:{
+      app_title: "Expense Tracker",
+  
+    }
+
+  },
+  error:{
+    header:{
+
+    }
+  }
+  
+  
 };
