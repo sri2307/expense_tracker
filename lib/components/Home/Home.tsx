@@ -4,7 +4,7 @@ import { en } from "translations/en/en";
 import { es } from "translations/es/es";
 import MContainer from "components/utils/container/MContainer";
 import Header from "./Header/Header";
-
+import { useSession } from "next-auth/react";
 
 type Props = {};
 
@@ -13,6 +13,7 @@ const Home = (props: Props) => {
   const { locale } = router;
 
   const t = locale === "en" ? en : es;
+  const { data, status } = useSession();
 
   const styles = {
     container: {
@@ -26,13 +27,16 @@ const Home = (props: Props) => {
       transform: "translate(-50%, -50%)",
       borderRadius: "10px",
     },
-    
   };
-
+  console.log(data, status);
   return (
     <>
-      <Header/>
-      <MContainer styles={styles.container}></MContainer>
+      {data && (
+        <>
+          <Header />
+          <MContainer styles={styles.container}></MContainer>
+        </>
+      )}
     </>
   );
 };
