@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import React from "react";
-import Login from "components/auth/Login";
-
-console.log(process.env.NEXT_PUBLIC_TEST_VAR);
+import Login from "@lib/components/auth/Login";
 
 const Welcome: NextPage = () => {
   return <Login />;

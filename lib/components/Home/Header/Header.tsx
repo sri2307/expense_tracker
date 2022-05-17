@@ -1,8 +1,8 @@
 import React from "react";
-import MNavbar from "components/utils/navbar/MNavbar";
-import MTypography from "components/utils/typography/MTypography";
-import { en } from "translations/en/en";
-import { es } from "translations/es/es";
+import MNavbar from "@lib/components/utils/navbar/MNavbar";
+import MTypography from "@lib/components/utils/typography/MTypography";
+import { en } from "@lib/translations/en/en";
+import { es } from "@lib/translations/es/es";
 import { useRouter } from "next/router";
 
 type Props = {};
