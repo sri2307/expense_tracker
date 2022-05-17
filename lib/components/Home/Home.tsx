@@ -29,14 +29,16 @@ const Home = (props: Props) => {
     },
   };
 
+  console.log(data);
+
   return (
     <>
-      {data && (
+      {data ? (
         <>
           <Header />
           <MContainer styles={styles.container}></MContainer>
         </>
-      )}
+      ) : null}
     </>
   );
 };
