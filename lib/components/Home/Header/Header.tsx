@@ -4,7 +4,8 @@ import MTypography from "@lib/components/utils/typography/MTypography";
 import { en } from "@lib/translations/en/en";
 import { es } from "@lib/translations/es/es";
 import { useRouter } from "next/router";
-import MButton from "components/utils/button/MButton";
+import MButton from "@lib/components/utils/button/MButton";
+import { signIn } from "next-auth/react";
 
 type Props = {};
 
@@ -30,10 +31,18 @@ const Header = (props: Props) => {
     },
   };
 
+  const signInHandler = () => {
+    signIn("okta", { callbackUrl: "http://localhost:3000/welcome" });
+  };
+
   return (
     <MNavbar styles={styles.navbar}>
       <MTypography styles={styles.title} content={t.app_title} />
-      <MButton styles={styles.button} buttonName="Sign In" />
+      <MButton
+        styles={styles.button}
+        buttonName='Sign In'
+        click={signInHandler}
+      />
     </MNavbar>
   );
 };

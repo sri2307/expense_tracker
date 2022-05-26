@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import { en } from "@lib/translations/en/en";
 import { es } from "@lib/translations/es/es";
 import MContainer from "@lib/components/utils/container/MContainer";
 import Header from "@lib/components/Home/Header/Header";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 
 type Props = {};
 
@@ -29,6 +29,12 @@ const Home = (props: Props) => {
     },
   };
 
+  // useEffect(() => {
+  //   !data && signIn("okta");
+  // }, []);
+
+  console.log(data);
+
   return (
     <>
       {data ? (
@@ -36,8 +42,9 @@ const Home = (props: Props) => {
           <Header />
           <MContainer styles={styles.container}>
             {/* <div style={{ height: "100vh", width: "90vw" }}> */}
+            <h1>{data && "test"}</h1>
             <embed
-              src='http://localhost:3000/login'
+              src='https://expense-tracker-git-dev-sri2307.vercel.app/'
               width='1000'
               height='1000'
               type='text/html'></embed>
