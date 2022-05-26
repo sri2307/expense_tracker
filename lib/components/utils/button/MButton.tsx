@@ -4,7 +4,7 @@ import React from "react";
 type Props = {
   styles?: any;
   buttonName: string;
-  click?: Function;
+  click?: any;
 };
 
 const MButton = (props: Props) => {
