@@ -29,14 +29,20 @@ const Home = (props: Props) => {
     },
   };
 
-  console.log(data);
-
   return (
     <>
       {data ? (
         <>
           <Header />
-          <MContainer styles={styles.container}></MContainer>
+          <MContainer styles={styles.container}>
+            {/* <div style={{ height: "100vh", width: "90vw" }}> */}
+            <embed
+              src='http://localhost:3000/login'
+              width='1000'
+              height='1000'
+              type='text/html'></embed>
+            {/* </div> */}
+          </MContainer>
         </>
       ) : null}
     </>
